@@ -1,0 +1,12 @@
+{
+    "db_username" : "expressfootballv2",
+    "db_password" : "tavteam",
+	"db_host" : "ds011218.mlab.com",
+	"db_port" : 11218,
+	"db_name" : "expressfootballv2",
+	"db_connection_url_1":"mongodb://expressfootballv2:tavteam@localhost:27017/expressfootballv2",
+	"db_connection_url":"mongodb://expressfootballv2:tavteam@ds011218.mlab.com:11218/expressfootballv2",
+	"default_limit":15,
+	"default_page":1,
+	"populatedata":"https://github.com/buunguyen/mongoose-deep-populate#perform-population"
+}
