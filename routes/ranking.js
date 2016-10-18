@@ -9,8 +9,8 @@ var defaultPage = config.default_page;
 exports.findAll = function(req, res) {
 	var	params = url.parse(req.url,true).query;
 	
-	var page = params.page || defaultPage;
-	var limit = params.limit || defaultLimit;
+	var page = +params.page || defaultPage;
+	var limit = +params.limit || defaultLimit;
 	var sortParam = {};
 	sortParam[params.orderBy || 'position'] = params.asc || 1;
 
@@ -28,8 +28,8 @@ exports.findByLeagueId = function(req, res) {
 	var league_id = parseInt(req.params.league_id);
 	var	params = url.parse(req.url,true).query;
 	
-	var page = params.page || defaultPage;
-	var limit = params.limit || defaultLimit;
+	var page = +params.page || defaultPage;
+	var limit = +params.limit || defaultLimit;
 	var sortParam = {};
 	sortParam[params.orderBy || 'position'] = params.asc || -1;
 

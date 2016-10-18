@@ -133,7 +133,12 @@ var SampleApp = function() {
         /*for (var r in self.routes) {
             self.app.get(r, self.routes[r]);
         }*/
-        self.app.use(express.bodyParser());
+        //self.app.use(express.bodyParser());
+        self.app.use(function(req, res, next) {
+            res.header("Access-Control-Allow-Origin", "*");
+            res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+            next();
+        });
 
 		self.app.get('/matches', matches.findAll);//page=?&&limit=?&&orderBy=?&&asc=asc||desc
 		self.app.get('/matches/:match_id', matches.findById);
